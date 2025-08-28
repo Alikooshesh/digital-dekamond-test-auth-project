@@ -19,7 +19,7 @@ const Page = () => {
   return (
     <>
       <div className="w-screen h-screen overflow-y-auto flex items-center justify-center">
-        <section className="w-full max-w-500 mx-auto flex flex-col gap-16">
+        <section className="w-full max-w-500 mx-auto px-8 flex flex-col gap-16">
           <h2 className="text-gray-700 font-bold text-2xl text-center">
             Welcome Back!
           </h2>
