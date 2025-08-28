@@ -52,7 +52,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
           {...props}
         />
         {errorMessage && (
-          <span className="text-xs text-destructive">{errorMessage}</span>
+          <span className="text-xs text-destructive text-error">{errorMessage}</span>
         )}
       </div>
     );

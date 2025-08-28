@@ -14,6 +14,7 @@ module.exports = {
           dark: '#4C1D95',
           foreground: "#FFF"
         },
+        error : "#F44336",
         background: '#FFFFFF',
         onBackground: '#1F2937',
       },
