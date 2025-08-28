@@ -40,6 +40,7 @@ const AuthForm = () => {
         type="submit"
         isLoading={loginPending || isSubmitting}
         disabled={!isValid}
+        role="Login"
       >
         Login
       </Button>

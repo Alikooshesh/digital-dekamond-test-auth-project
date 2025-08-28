@@ -20,7 +20,7 @@ const Page = () => {
     <div className="w-full h-screen flex items-center justify-center">
       <div className="w-full max-w-500 mx-auto px-8 flex flex-col gap-32">
         {!user ? <p>Bye Bye ...</p> : <WelcomeBox {...user} />}
-        <Button onClick={logout} variant="outline">
+        <Button onClick={logout} variant="outline" role="Logout">
             Logout
         </Button>
       </div>
