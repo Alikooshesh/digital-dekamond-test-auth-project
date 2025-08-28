@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -12,6 +12,7 @@ module.exports = {
           DEFAULT: '#6B21A8',
           light: '#9333EA',
           dark: '#4C1D95',
+          foreground: "#FFF"
         },
         background: '#FFFFFF',
         onBackground: '#1F2937',
@@ -23,23 +24,13 @@ module.exports = {
         8: '8px',
         10: '10px',
         12: '12px',
-        14: '14px',
         16: '16px',
-        18: '18px',
         20: '20px',
-        22: '22px',
         24: '24px',
-      },
-      width: {
-        500: '500px',
-      },
-      height: {
-        500: '500px',
+        48: '48px',
+        64: '64px',
       },
       maxWidth: {
-        500: '500px',
-      },
-      maxHeight: {
         500: '500px',
       },
     },
