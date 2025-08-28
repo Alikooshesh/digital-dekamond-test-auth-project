@@ -1,7 +1,7 @@
 import { User } from "@/types/user";
 import Image from "next/image";
 
-interface WelcomeBoxProps extends Omit<User, "email"> {}
+type WelcomeBoxProps = Omit<User, "email">;
 
 const WelcomeBox = ({ name, picture }: WelcomeBoxProps) => {
   return (
