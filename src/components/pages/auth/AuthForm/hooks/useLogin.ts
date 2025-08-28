@@ -22,7 +22,7 @@ export function useLogin({ onError }: UseLoginProps = {}) {
       setUser(user); 
       router.push("/dashboard");
     },
-    onError: (error: any) => {
+    onError: (error) => {
       if (onError) {
         if (error?.message) {
           onError(error.message);
