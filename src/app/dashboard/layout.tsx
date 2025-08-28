@@ -1,3 +1,5 @@
+import Header from "@/components/pages/dashboard/layout/Header";
+
 const Layout = ({
     children,
   }: Readonly<{
@@ -5,6 +7,7 @@ const Layout = ({
   }>)=>{
     return(
         <>
+            <Header/>
             {children}
         </>
     )
