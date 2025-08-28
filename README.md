@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Auth Mini (Client-side)
+A tiny demo showing a **client-side** login flow with **Next.js App Router + TypeScript + Tailwind + shadcn-style** components, now using **React Hook Form + Zod** and **TanStack Query**.
 
-## Getting Started
-
-First, run the development server:
-
+## 🚀 Quickstart
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm i
 pnpm dev
-# or
-bun dev
+```
+Open http://localhost:3000/login → enter a valid Iranian phone number → Login.
+
+## ✅ Valid phone formats
+- `09xxxxxxxxx`
+- `+989xxxxxxxxx`
+- `00989xxxxxxxxx`
+
+## 🧩 Tech
+- Next.js App Router, client components where needed
+- Tailwind CSS only for styling
+- **React Hook Form + Zod** for form & schema validation
+- **TanStack Query** for mutation orchestration & devtools
+
+## 🔒 Auth model
+- Client-side only: user data stored in `localStorage` under `auth:user`.
+- Client redirects; no server middleware.
+
+## 🧪 Tests
+- **Unit**: Vitest + jsdom for utils (`lib/validation.ts`, `lib/storage.ts`)
+- **E2E**: Playwright (login flow + redirect guard + logout)
+```bash
+pnpm test        # unit
+pnpm test:e2e    # e2e
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧪 Notes
+- Login API: `https://randomuser.me/api/?results=1&nat=us`
+- We only save `{ name, email, picture }`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Scripts
+- `dev` / `build` / `start` / `test` / `test:e2e`
